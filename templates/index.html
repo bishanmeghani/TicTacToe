@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div id="playerMessage" class="player-message"></div>
+    <div id="tic-tac-toe-board">
+
+            <div class="cell" id="cell-1"></div>
+            <div class="cell" id="cell-2"></div>
+            <div class="cell" id="cell-3"></div>
+
+            <div class="cell" id="cell-4"></div>
+            <div class="cell" id="cell-5"></div>
+            <div class="cell" id="cell-6"></div>
+
+            <div class="cell" id="cell-7"></div>
+            <div class="cell" id="cell-8"></div>
+            <div class="cell" id="cell-9"></div>
+
+    </div>
+    <div id="gameMessage" class="game-message"></div>
+    <div id="buttonContainer">
+        <button id="resetButton">Reset Game</button>
+        <button id="continueButton">Continue Playing</button>
+        <button id="askToContinueButton">Ask to Continue</button>
+    </div>
+    <div id="gamePrompt" class="modal">
+        <div class="modal-content">
+            <p>Player A wants to continue the previous game. Accept?</p>
+            <button id="acceptContinueButton">Accept</button>
+            <button id="declineContinueButton">Decline</button>
+        </div>
+    </div>        
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
